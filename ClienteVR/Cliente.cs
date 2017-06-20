@@ -8,12 +8,12 @@ namespace ClienteVR
 {
     class Cliente
     {
-        private int codUsuario {get; set; }
-        private string nombre { get; set; }
-        private string password { get; set; }
-        private int ci { get; set; }
-        private string tipo { get; set; }
-        private string stuff { get; set; }
-        private string admi { get; set; }
+        public int codUsuario {get; set; }
+        public string nombre { get; set; }
+        public string password { get; set; }
+        public int ci { get; set; }
+        public string tipo { get; set; }
+        public string stuff { get; set; }
+        public string admi { get; set; }
     }
 }
