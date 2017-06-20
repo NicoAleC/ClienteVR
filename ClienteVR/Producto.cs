@@ -9,12 +9,12 @@ namespace ClienteVR
     class Producto
     {
         public int codproducto;
-        public int codC;
-        public double precioC;
-        public double precioV;
+        public int codc;
+        public double precioc;
+        public double preciov;
         public int cantidad;
         public EnvironmentVariableTarget imagen;
-        public string descripcionP;
+        public string descripcionp;
         public string nombreprod;
     }
 }

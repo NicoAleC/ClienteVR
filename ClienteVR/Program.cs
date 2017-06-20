@@ -31,6 +31,17 @@ namespace ClienteVR
             List<Producto> p = JsonConvert.DeserializeObject<List<Producto>>(json);
             Console.WriteLine(p.ElementAt(0).codproducto);
 
+            for (int i = 0; i < p.Capacity; i++)
+            {
+                Console.WriteLine(p[i].codproducto);
+                Console.WriteLine(p[i].codc);
+                Console.WriteLine(p[i].precioc);
+                Console.WriteLine(p[i].cantidad);
+                Console.WriteLine(p[i].descripcionp);
+                Console.WriteLine(p[i].nombreprod);
+
+            }
+
 
         }
 
