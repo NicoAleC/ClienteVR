@@ -15,6 +15,14 @@ namespace ClienteVR
             var json = new WebClient().DownloadString("http://192.168.47.0/slimapp/public/api/coustmr/1");
             List<Cliente> m = JsonConvert.DeserializeObject<List<Cliente>>(json);
             Console.WriteLine(m.ElementAt(0).ci);
+
+
+            var productos = new WebClient().DownloadString("http://192.168.47.0/slimapp/public/api/producto/1");
+            List<Producto> p = JsonConvert.DeserializeObject<List<Producto>>(json);
+            Console.WriteLine(p.ElementAt(0).codproducto);
+
+
         }
+
     }
 }
