@@ -12,6 +12,7 @@ namespace ClienteVR
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
