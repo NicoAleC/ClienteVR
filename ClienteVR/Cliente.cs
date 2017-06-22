@@ -15,5 +15,16 @@ namespace ClienteVR
         public string tipo { get; set; }
         public string stuff { get; set; }
         public string admi { get; set; }
+
+        public Cliente()
+        {
+            this.codUsuario = 0;
+            this.nombre = "";
+            this.password = "";
+            this.ci = 0;
+            this.tipo = "";
+            this.stuff = "";
+            this.admi = "";
+        }
     }
 }
