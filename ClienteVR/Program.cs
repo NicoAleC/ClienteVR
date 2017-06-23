@@ -12,7 +12,7 @@ namespace ClienteVR
     {
         static void Main(string[] args)
         {
-            var json = new WebClient().DownloadString("http://192.168.47.0/slimapp/public/api/coustmr/1");
+            /*var json = new WebClient().DownloadString("http://192.168.43.115/slimapp/public/api/coustmr/1");
             List<Cliente> m = JsonConvert.DeserializeObject<List<Cliente>>(json);
             for (int i = 0; i < m.Capacity; i++)
             {
@@ -24,24 +24,32 @@ namespace ClienteVR
                 Console.WriteLine(m[i].stuff);
                 Console.WriteLine(m[i].admi);
 
-            }
+            }*/
 
 
-            var productos = new WebClient().DownloadString("http://192.168.47.0/slimapp/public/api/producto/1");
-            List<Producto> p = JsonConvert.DeserializeObject<List<Producto>>(json);
-            Console.WriteLine(p.ElementAt(0).codproducto);
+            var productos = new WebClient().DownloadString("http://192.168.43.115/slimapp/public/api/productos/total");
+            List<Producto> p = JsonConvert.DeserializeObject<List<Producto>>(productos);
+            //Console.WriteLine(p.ElementAt(0).codproducto);
 
-            for (int i = 0; i < p.Capacity; i++)
+            for (int i = 0; i < p.Count; i++)
             {
-                Console.WriteLine(p[i].codproducto);
-                Console.WriteLine(p[i].codc);
-                Console.WriteLine(p[i].precioc);
-                Console.WriteLine(p[i].cantidad);
-                Console.WriteLine(p[i].descripcionp);
-                Console.WriteLine(p[i].nombreprod);
-
+                Console.WriteLine("codigo producto: " + p[i].codproducto);
+                Console.WriteLine("codigo c: " + p[i].codc);
+                Console.WriteLine("precio c: " + p[i].precioc);
+                Console.WriteLine("cantidad: " + p[i].cantidad);
+                Console.WriteLine("descripcion: " + p[i].descripcionp);
+                Console.WriteLine("nombre: " + p[i].nombreprod);
             }
-
+            for (int i = 0; i < p.Count; i++)
+            { 
+                if (p[i].codproducto == 80)
+                {
+                    Console.WriteLine("nombre: " + p[i].nombreprod);
+                    Console.WriteLine("precio: " + p[i].preciov);
+                    Console.WriteLine("cantidad: " + p[i].cantidad);
+                }
+            }
+            Console.ReadKey();
 
         }
 

@@ -13,7 +13,7 @@ namespace ClienteVR
         public double precioc { get; set; }
         public double preciov { get; set; }
         public int cantidad { get; set; }
-        public BadImageFormatException imagen { get; set; }
+        public string imagen { get; set; }
         public string descripcionp { get; set; }
         public string nombreprod { get; set; }
 
