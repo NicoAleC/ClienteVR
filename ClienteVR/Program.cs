@@ -12,44 +12,10 @@ namespace ClienteVR
     {
         static void Main(string[] args)
         {
-            /*var json = new WebClient().DownloadString("http://192.168.43.115/slimapp/public/api/coustmr/1");
-            List<Cliente> m = JsonConvert.DeserializeObject<List<Cliente>>(json);
-            for (int i = 0; i < m.Capacity; i++)
-            {
-                Console.WriteLine(m[i].codUsuario);
-                Console.WriteLine(m[i].nombre);
-                Console.WriteLine(m[i].password);
-                Console.WriteLine(m[i].ci);
-                Console.WriteLine(m[i].tipo);
-                Console.WriteLine(m[i].stuff);
-                Console.WriteLine(m[i].admi);
-
-            }*/
-
-
-            var productos = new WebClient().DownloadString("http://192.168.43.115/slimapp/public/api/productos/total");
-            List<Producto> p = JsonConvert.DeserializeObject<List<Producto>>(productos);
-            //Console.WriteLine(p.ElementAt(0).codproducto);
-
-            for (int i = 0; i < p.Count; i++)
-            {
-                Console.WriteLine("codigo producto: " + p[i].codproducto);
-                Console.WriteLine("codigo c: " + p[i].codc);
-                Console.WriteLine("precio c: " + p[i].precioc);
-                Console.WriteLine("cantidad: " + p[i].cantidad);
-                Console.WriteLine("descripcion: " + p[i].descripcionp);
-                Console.WriteLine("nombre: " + p[i].nombreprod);
-            }
-            for (int i = 0; i < p.Count; i++)
-            { 
-                if (p[i].codproducto == 80)
-                {
-                    Console.WriteLine("nombre: " + p[i].nombreprod);
-                    Console.WriteLine("precio: " + p[i].preciov);
-                    Console.WriteLine("cantidad: " + p[i].cantidad);
-                }
-            }
-            Console.ReadKey();
+            Control c = new ClienteVR.Control();
+            Console.WriteLine("Ingresar el código del producto");
+            int cod = Convert.ToInt32(Console.ReadLine());
+            c.consultarProductos(cod);
 
         }
 
